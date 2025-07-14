@@ -1,0 +1,9 @@
+sanic==25.3.0
+sanic-ext==24.12.0
+redis==6.2.0
+rembg==2.0.67
+SQLAlchemy==2.0.41
+asyncmy==0.2.10
+asyncpg==0.30.0
+onnxruntime==1.22.1
+pillow==11.1.0
