@@ -11,3 +11,4 @@ httpx==0.28.1
 numpy==2.2.3
 granian==2.3.4
 orjson==3.10.15
+gunicorn
