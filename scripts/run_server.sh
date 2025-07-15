@@ -1,2 +1,2 @@
 #!/bin/bash
-exec gunicorn -c gunicorn.py lib.app:app
+exec ./venv/bin/gunicorn -c gunicorn.py lib.app:app
