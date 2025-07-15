@@ -14,7 +14,7 @@ async def blur_bg(request: Request):
     upload_files = global_context.request_data.files
     # 获取上传的文件
     target_file = list(upload_files.values())[0][0]
-    # 图像处理
+    # 图像处理，移除背景
     output_bytes = remove(target_file.body, alpha_matting=True, session=new_session("isnet-general-use"))
     output_image = Image.open(BytesIO(output_bytes))
     # 原始图像
