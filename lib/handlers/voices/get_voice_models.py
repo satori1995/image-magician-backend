@@ -2017,17 +2017,5 @@ client = httpx.Client(
 )
 response = requests.get("https://httpbin.org/ip", proxies={"http": "http://localhost:7890"})
 print(response.json())
-exit()
-API_KEY = ""
-# 传给 openai，否则无法设置代理
-client = OpenAI(api_key=API_KEY, http_client=client)
-chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "system",
-            "content": "你是一位中文翻译助手，我给你英文，你帮我翻译成优雅准确的中文并返回，注意：不需要多余的内容，只要翻译后的中文",
-        },
-    ],
-    model="gpt-4",
-)
+
 
