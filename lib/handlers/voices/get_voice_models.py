@@ -2018,7 +2018,7 @@ client = httpx.Client(
 response = requests.get("https://httpbin.org/ip", proxies={"http": "http://localhost:7890"})
 print(response.json())
 exit()
-API_KEY = "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"
+API_KEY = ""
 # 传给 openai，否则无法设置代理
 client = OpenAI(api_key=API_KEY, http_client=client)
 chat_completion = client.chat.completions.create(
