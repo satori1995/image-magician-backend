@@ -1,4 +1,5 @@
 # /bin/bash
+git checkout .
 git pull
 docker rm -f image-magician-backend
 docker rmi -f image-magician-backend
