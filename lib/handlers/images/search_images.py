@@ -2,7 +2,7 @@
 查询壁纸，来自于 https://lexica.art/
 """
 import httpx
-from sanic import Request
+from sanic import Request, raw
 from lib.app_core import app
 from lib.app_core.global_context import global_context
 
@@ -43,4 +43,12 @@ async def search_images(request: Request):
     global_context.response_data.set(200, {"cursor": next_cursor, "images": images})
     return global_context.response_data.response
 
+
+@app.post("/get_image")
+async def get_images(request: Request):
+    image_url = global_context.request_data.json["image_url"]
+    resp = await HTTPX_CLIENT.get(image_url)
+    return raw(
+        resp.content,
+    )
 
