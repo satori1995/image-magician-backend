@@ -1,4 +1,5 @@
 # /bin/bash
+git pull
 docker rm -f image-magician-backend
 docker rmi -f image-magician-backend
 docker build -f Dockerfile -t image-magician-backend . --no-cache
