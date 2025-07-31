@@ -2007,15 +2007,6 @@ async def get_voice_models(request: Request):
     pass
 
 
-from openai import OpenAI
-import httpx, requests
-import os
 
-os.environ["HTTP_PROXY"] = "http://localhost:7890"
-# 先设置 client
-client = httpx.Client(
-)
-response = requests.get("https://httpbin.org/ip", proxies={"http": "http://localhost:7890"})
-print(response.json())
 
 

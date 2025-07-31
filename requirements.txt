@@ -1,12 +1,11 @@
 sanic==25.3.0
 sanic_cors==2.2.0
 redis==6.2.0
-rembg==2.0.67
 SQLAlchemy==2.0.41
 asyncmy==0.2.10
 asyncpg==0.30.0
-onnxruntime==1.22.1
 pillow==11.1.0
+opencv-python
 httpx==0.28.1
 numpy==2.2.3
 granian==2.3.4
